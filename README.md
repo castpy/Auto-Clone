@@ -1,6 +1,23 @@
 # AUTO CLONE
 
+![image](https://user-images.githubusercontent.com/61066188/154563027-b286abd4-e0fe-4980-a9a3-95a36f6a750c.png)
+
+
 > Este repositório tem o intuito de compartihar uma ferramenta prática e fácil de usar. O objetivo é dar ao usuário o poder de clonar páginas WEB com um clique.
+
+<h4 align="center"> 
+	🚧  Auto Clone 🚀 Em BETA...  🚧
+</h4>
+
+### Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+> - [x] beautifulsoup4
+> - [x] lxml
+> - [x] html5lib
+> - [x] shutil
+
+Para isso, abra o seu terminal, caminhe até o diretório do projeto e digite:
+> pip install -r bibliotecas.txt
 
 ### Ajustes e melhorias
 
