@@ -7,8 +7,11 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Criação da Base do projeto
-- [ ] Estruturando caminho dos arquivos 'index.html' e 'styles.css'.
 - [x] Transformando de BFS para UTF8
+- [x] Capturando HTML
+- [ ] Capturando CSS
+- [x] Estruturando caminho dos arquivos 'index.html' 
+- [ ] Estruturando caminho dos arquivos 'styles.css'.
 - [ ] Removendo contúdo inutilizavel
 - [ ] Tratando dados e separando em arquivos .csv
 - [ ] Criando interface em terminal
