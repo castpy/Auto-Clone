@@ -1,9 +1,12 @@
-import os, csv, shutil
+import os, csv, shutil, re
 import urllib.request
 from time import sleep
 from bs4 import BeautifulSoup
 from lib import clear
 #Aqui foram feitas as importações necessárias para o bom funcionamento do Programam!
+
+os.system('pip install -r bibliotecas.txt')
+clear.cls()
 
 while True:
     clear.cls()
@@ -20,9 +23,9 @@ while True:
 ''')
     try:
         op = str(input('''
-\033[33m[01]\033[m Complete clone
+\033[33m[01]\033[m Complete clone   \033[31m[Não funcional]\033[m
 \033[33m[02]\033[m Clone HTML
-\033[33m[03]\033[m Clone CSS
+\033[33m[03]\033[m Clone CSS        \033[31m[Não funcional]\033[m
 \033[31m[04]\033[m EXIT
 
 └> '''))
@@ -39,12 +42,14 @@ while True:
                 codigoCorpoPage = urllib.request.urlopen(url)
                 soup = BeautifulSoup(codigoCorpoPage, features="html5lib")
                 titleSite = soup.title.string
+                nameDir="".join(c for c in titleSite if c.isalpha())
                 
+
                 criarPage = open('index.html', 'w', encoding='utf-8')
                 criarPage.write(str(soup))
                 criarPage.close()
 
-                diretorio = titleSite
+                diretorio = nameDir
                 os.mkdir(diretorio)
                 shutil.copy2('index.html', diretorio)
                 os.remove('index.html')
