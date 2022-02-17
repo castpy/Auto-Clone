@@ -8,7 +8,7 @@ soup = BeautifulSoup(page, 'html5lib') #Fazendo parse no HTML da variavel e arma
 soup.encode('utf-8') #Codificando para UTF-8
 
 
-f = csv.writer(open('index.html', 'w')) #Criando o arquivo index.html com o método de escrita 'w'
+f = csv.writer(open('index.html', 'w', encoding='UTF-8')) #Criando o arquivo index.html com o método de escrita 'w'
 f.writerow([soup]) #Escrevendo o conteúdo do site no arquivo index.html
 
 
