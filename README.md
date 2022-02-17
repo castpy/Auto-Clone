@@ -8,7 +8,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] Criação da Base do projeto
 - [ ] Estruturando caminho dos arquivos 'index.html' e 'styles.css'.
-- [ ] Transformando de BFS para UTF8
+- [x] Transformando de BFS para UTF8
 - [ ] Removendo contúdo inutilizavel
 - [ ] Tratando dados e separando em arquivos .csv
 - [ ] Criando interface em terminal
