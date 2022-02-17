@@ -26,13 +26,13 @@ while True:
 \033[31m[04]\033[m EXIT
 
 └> '''))
-        if op == '3' or op == '03': #Essa condição será usada para fazer um clone COMPLETO de páginas web [HTML - CSS - JS]
+        if op == '1' or op == '01': #Essa condição será usada para fazer um clone COMPLETO de páginas web [HTML - CSS - JS]
             print('\033[31mEM DESENVOLVIMENTO...\033[m')
             sleep(2)
             clear.cls()
             continue
 
-        elif op == '3' or op == '03': #Essa condição está configurada para clonar somente oque encontrar no HTML
+        elif op == '2' or op == '02': #Essa condição está configurada para clonar somente oque encontrar no HTML
             try:
                 url = input('Alvo do Clone: ').lower().strip()
                 url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
@@ -63,7 +63,7 @@ while True:
             clear.cls()
             continue
 
-        elif op == '3' or op == '03': #Essa condição está configurada para terminar o programa
+        elif op == '4' or op == '04': #Essa condição está configurada para terminar o programa
             print('\033[31mVocê Escolheu sair!\033[m')
             sleep(2)
             clear.cls()
