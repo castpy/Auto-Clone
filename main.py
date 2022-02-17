@@ -16,23 +16,23 @@ while True:
 | (   ) || |   | |   | |   | |   | |    | |      | |      | |   | || | \   || (
 | )   ( || (___) |   | |   | (___) |    | (____/\| (____/\| (___) || )  \  || (____/
 |/     \|(_______)   )_(   (_______)    (_______/(_______/(_______)|/    )_)(_______/
-\033[m                                          \033[35mBy: Marcus Castilho\033[m v0.1
+\033[m                                          \033[35mBy: Marcus Castilho\033[m v0.1 BETA
 ''')
     try:
-        op = int(input('''
+        op = str(input('''
 \033[33m[01]\033[m Complete clone
 \033[33m[02]\033[m Clone HTML
 \033[33m[03]\033[m Clone CSS
 \033[31m[04]\033[m EXIT
 
-└>'''))
-        if op == 1:
+└> '''))
+        if op == '3' or op == '03':
             print('\033[31mEM DESENVOLVIMENTO...\033[m')
             sleep(2)
             clear.cls()
             continue
 
-        elif op == 2:
+        elif op == '3' or op == '03':
             try:
                 url = input('Alvo do Clone: ').lower().strip()
                 url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
@@ -57,13 +57,15 @@ while True:
                 os.remove('index.html')
                 sleep(5)
 
-        elif op == 3:
+        elif op == '3' or op == '03':
             print('\033[31mEM DESENVOLVIMENTO...\033[m')
             sleep(2)
             clear.cls()
             continue
 
-        elif op == 4:
+        elif op == '3' or op == '03':
+            print('\033[31mVocê Escolheu sair!\033[m')
+            sleep(2)
             clear.cls()
             break
         
