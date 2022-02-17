@@ -11,10 +11,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Capturando HTML
 - [ ] Capturando CSS
 - [x] Estruturando caminho dos arquivos 'index.html' 
-- [ ] Estruturando caminho dos arquivos 'styles.css'.
-- [ ] Removendo contúdo inutilizavel
-- [ ] Tratando dados e separando em arquivos .csv
-- [ ] Criando interface em terminal
+- [ ] Estruturando caminho dos arquivos 'styles.css'
+- [X] Removendo contúdo inutilizavel
+- [X] Criando interface em terminal
 
 ## 📫 Contribuindo com o Auto Clone
 Para contribuir com Phyrewall, siga estas etapas:
