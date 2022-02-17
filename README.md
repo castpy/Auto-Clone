@@ -11,7 +11,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Capturando HTML
 - [ ] Capturando CSS
 - [x] Estruturando caminho dos arquivos 'index.html' 
-- [ ] Estruturando caminho dos arquivos 'styles.css'.
+- [ ] Estruturando caminho dos arquivos 'styles.css'
 - [X] Removendo contúdo inutilizavel
 - [X] Criando interface em terminal
 
