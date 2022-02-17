@@ -42,8 +42,7 @@ while True:
                 codigoCorpoPage = urllib.request.urlopen(url)
                 soup = BeautifulSoup(codigoCorpoPage, features="html5lib")
                 titleSite = soup.title.string
-                nameDir="".join(c for c in titleSite if c.isalpha())
-                
+                nameDir="".join(c for c in titleSite if c.isalnum())
 
                 criarPage = open('index.html', 'w', encoding='utf-8')
                 criarPage.write(str(soup))
