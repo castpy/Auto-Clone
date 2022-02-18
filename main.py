@@ -2,23 +2,13 @@ import os, csv, shutil, re
 import urllib.request
 from time import sleep
 from bs4 import BeautifulSoup
-from lib import clear
+from lib import clear, banner
 #Aqui foram feitas as importações necessárias para o bom funcionamento do Programam!
 
 
 while True:
     clear.cls()
-    print('''\033[32m
- _______          _________ _______      _______  _        _______  _        _______
-(  ___  )|\     /|\__   __/(  ___  )    (  ____ \( \      (  ___  )( (    /|(  ____ 
-| (   ) || )   ( |   ) (   | (   ) |    | (    \/| (      | (   ) ||  \  ( || (    \/
-| (___) || |   | |   | |   | |   | |    | |      | |      | |   | ||   \ | || (__
-|  ___  || |   | |   | |   | |   | |    | |      | |      | |   | || (\ \) ||  __)
-| (   ) || |   | |   | |   | |   | |    | |      | |      | |   | || | \   || (
-| )   ( || (___) |   | |   | (___) |    | (____/\| (____/\| (___) || )  \  || (____/
-|/     \|(_______)   )_(   (_______)    (_______/(_______/(_______)|/    )_)(_______/
-\033[m                                          \033[35mBy: Marcus Castilho\033[m v0.1 BETA
-''')
+    banner.nameBanner()
     try:
         op = str(input('''
 \033[33m[01]\033[m Complete clone   \033[31m[Não funcional]\033[m
@@ -34,19 +24,20 @@ while True:
             continue
 
         elif op == '2' or op == '02': #Essa condição está configurada para clonar somente oque encontrar no HTML
+            url = input('Alvo do Clone: ').lower().strip()
+            nameDir01 = url.removeprefix('https://')
+            url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
+            codigoCorpoPage = urllib.request.urlopen(url)
+            soup = BeautifulSoup(codigoCorpoPage, features="html5lib")
+            titleSite = soup.title.string
+            nameDir="".join(c for c in titleSite if c.isalnum())
+
+            criarPage = open('index.html', 'w', encoding='utf-8')
+            criarPage.write(str(soup))
+            criarPage.close()
+
             try:
-                url = input('Alvo do Clone: ').lower().strip()
-                url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
-                codigoCorpoPage = urllib.request.urlopen(url)
-                soup = BeautifulSoup(codigoCorpoPage, features="html5lib")
-                titleSite = soup.title.string
-                nameDir="".join(c for c in titleSite if c.isalnum())
-
-                criarPage = open('index.html', 'w', encoding='utf-8')
-                criarPage.write(str(soup))
-                criarPage.close()
-
-                diretorio = nameDir
+                diretorio = nameDir01
                 os.mkdir(diretorio)
                 shutil.copy2('index.html', diretorio)
                 os.remove('index.html')
@@ -58,6 +49,7 @@ while True:
                 print('Erro: {}'.format(error))
                 os.remove('index.html')
                 sleep(5)
+                continue
 
         elif op == '3' or op == '03': #Essa condição será configurada para clonar somente oque encontrar no HTML
             print('\033[31mEM DESENVOLVIMENTO...\033[m')
