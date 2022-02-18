@@ -33,7 +33,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [X] Criando interface em terminal
 
 ## 📫 Contribuindo com o Auto Clone
-Para contribuir com Phyrewall, siga estas etapas:
+Para contribuir com Auto Clone, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
