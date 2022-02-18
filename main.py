@@ -5,8 +5,6 @@ from bs4 import BeautifulSoup
 from lib import clear
 #Aqui foram feitas as importações necessárias para o bom funcionamento do Programam!
 
-os.system('pip install -r bibliotecas.txt')
-clear.cls()
 
 while True:
     clear.cls()
