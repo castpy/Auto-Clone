@@ -5,6 +5,7 @@ from random import randint
 from bs4 import BeautifulSoup
 
 def clone():
+    print(' '*10,'\033[31mATENÇÃO!\033[m Somente o HTML será clonado. O site pode não importar o \033[36mCSS\033[m\n')
     url = input('Alvo do Clone: ').lower().strip()
     url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
 
@@ -35,6 +36,6 @@ def clone():
         sleep(1)
         print('Criando um novo diretório...')
         diretorio = nameDir.removeprefix('https://').removesuffix('.com')
-        os.mkdir(f'{diretorio}_{randint(0)}')
+        os.mkdir(f'{diretorio}_{randint(0, 10)}')
         os.remove('index.html')
         print(f'Verifique o arquivo \033[33mindex.html\033[m no diretorio \033[35m{diretorio}\033[m.')

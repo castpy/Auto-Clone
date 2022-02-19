@@ -18,11 +18,15 @@ while True:
             sleep(2)
             continue
 
-    if op == '1' or op == '01': #Essa condição está configurada para clonar somente oque encontrar no HTML
+    if op == '1' or op == '01': 
         cloneSite.clone()
+        #Essa condição está configurada para clonar somente oque encontrar no HTML
+
+        
     elif op == '2' or op == '02': #Essa condição está configurada para terminar o programa
         print('\033[31mVocê Escolheu sair!\033[m')
         sleep(2)
         clear.cls()
         break
+    
     
