@@ -3,7 +3,6 @@ from time import sleep
 
 #Aqui foram feitas as importações necessárias para o bom funcionamento do Programam!
 
-
 while True:
     clear.cls()
     banner.nameBanner()
@@ -28,5 +27,3 @@ while True:
         sleep(2)
         clear.cls()
         break
-    
-    

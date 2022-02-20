@@ -1,13 +1,22 @@
 import os, csv, shutil, re
 import urllib.request
+from lib import clear
 from time import sleep
 from random import randint
 from bs4 import BeautifulSoup
 
 def clone():
-    print(' '*10,'\033[31mATENÇÃO!\033[m Somente o HTML será clonado. O site pode não importar o \033[36mCSS\033[m\n')
-    url = input('Alvo do Clone: ').lower().strip()
-    url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
+    print(' '*10,'\033[31mATENÇÃO!\033[m Somente o HTML será clonado. Talvez não seja importado o \033[36mCSS\033[m\n')
+    while True:
+        try:
+            url = input('Alvo do Clone: ').lower().strip()
+            url = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'})
+            break
+        except ValueError as error:
+            print('\033[31mValor inválido!\033[m Adicione uma URL válida. {}'.format(error))
+            sleep(2)
+            continue
+
 
     codigoCorpoPage = urllib.request.urlopen(url)
     soup = BeautifulSoup(codigoCorpoPage, features="html5lib")
