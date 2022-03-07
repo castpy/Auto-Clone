@@ -2,3 +2,4 @@
 index.html
 lib/__pycache__/clear.cpython-310.pyc
 lib/__pycache__/cloneSite.cpython-310.pyc
+*.pyc
